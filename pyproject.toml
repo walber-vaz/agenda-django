@@ -10,6 +10,7 @@ packages = [{include = "agenda_django"}]
 python = "^3.11"
 django = "^4.2.4"
 python-decouple = "^3.8"
+pillow = "^10.0.0"
 
 
 [build-system]
