@@ -15,10 +15,25 @@ class ContactAdmin(admin.ModelAdmin):
         'show',
         'picture',
         'category',
+        'owner',
     )
     list_filter = ('created_date', 'show', 'category')
-    search_fields = ('first_name', 'last_name', 'phone', 'email', 'category')
-    ordering = ('-id', 'last_name', 'first_name', 'created_date', 'category')
+    search_fields = (
+        'first_name',
+        'last_name',
+        'phone',
+        'email',
+        'category',
+        'owner',
+    )
+    ordering = (
+        '-id',
+        'last_name',
+        'first_name',
+        'created_date',
+        'category',
+        'owner',
+    )
     date_hierarchy = 'created_date'
     fields = (
         'first_name',
@@ -27,6 +42,7 @@ class ContactAdmin(admin.ModelAdmin):
         'email',
         'description',
         'category',
+        'owner',
         'show',
         'picture',
     )
