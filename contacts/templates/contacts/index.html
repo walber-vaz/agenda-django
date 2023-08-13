@@ -3,12 +3,7 @@
 {% block 'title' %} Agenda {% endblock %}
 
 {% block 'content' %}
-  <main>
-    <h1>Agenda</h1>
-    <h2>Agenda</h2>
-    <h3>Agenda</h3>
-    <h4>Agenda</h4>
-    <h5>Agenda</h5>
-    <h6>Agenda</h6>
-  </main>
+  {% for contact in contacts %}
+      <p>{{ contact.first_name }}</p>
+  {% endfor %}
 {% endblock  %}
