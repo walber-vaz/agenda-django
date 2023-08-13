@@ -1,6 +1,8 @@
 :root {
   --width-content: 98rem;
-  --spacing: 1.5rem;
+  --link-dark-color: rgb(0, 83, 134);
+  --link-light-color: rgb(156, 217, 255);
+  --spacing: 1.2rem;
   --color-white: rgb(245, 245, 255);
   --color-black: rgb(0, 0, 30);
   --color-light-gray: rgb(230, 230, 245);
@@ -11,6 +13,7 @@
   --color-light-shadow-10: rgba(200, 200, 255, 10%);
   --color-light-shadow-20: rgba(200, 200, 255, 20%);
   --table-min-width: 60rem;
+  --font-size-mediun: 2.4rem;
   --default-border-radius: 0.5rem;
 }
 
@@ -28,9 +31,7 @@ html {
   -webkit-text-size-adjust: 100%;
   -moz-tab-size: 4;
   tab-size: 4;
-  font-family: theme('fontFamily.sans', ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"); /* 4 */
-  font-feature-settings: theme('fontFamily.sans[1].fontFeatureSettings', normal); /* 5 */
-  font-variation-settings: theme('fontFamily.sans[1].fontVariationSettings', normal); /* 6 */
+  font-family: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"; /* 4 */
 }
 
 body {
@@ -289,6 +290,54 @@ h6 {
   margin: calc(var(--spacing) * 2) auto;
   padding: var(--spacing);
   background: var(--color-white);
-  box-shadow: 0.2rem 0.2rem 0.5rem rgba(var(--color-dark-shadow-20));
+  box-shadow: 0.2rem 0.2rem 0.5rem var(--color-dark-shadow-20);
   border-radius: var(--default-border-radius);
+}
+
+.responsive-table {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+.contacts-table {
+  width: 100%;
+  min-width: var(--table-min-width);
+}
+
+.table-caption {
+  font-size: var(--font-size-mediun);
+}
+
+.table-row {
+  text-align: left;
+  text-overflow: ellipsis;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.table-row:nth-of-type(2n) {
+  background-color: var(--color-dark-shadow-5);
+}
+
+.table-row:not(.table-row-header):hover {
+  background-color: var(--color-dark-shadow-10);
+}
+
+.table-row-header {
+  color: var(--color-black);
+  background-color: var(--color-light-gray);
+}
+
+.table-header,
+.table-cel {
+  padding: var(--spacing);
+}
+
+.table-link {
+  color: var(--link-dark-color);
+  transition: color 0.2s ease-in-out;
+  text-decoration: none;
+}
+
+.table-link:hover {
+  color: var(--color-black);
 }
