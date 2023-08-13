@@ -1,3 +1,19 @@
+:root {
+  --width-content: 98rem;
+  --spacing: 1.5rem;
+  --color-white: rgb(245, 245, 255);
+  --color-black: rgb(0, 0, 30);
+  --color-light-gray: rgb(230, 230, 245);
+  --color-dark-shadow-5: rgba(0, 0,  10, 5%);
+  --color-dark-shadow-10: rgba(0, 0,  10, 10%);
+  --color-dark-shadow-20: rgba(0, 0,  10, 20%);
+  --color-light-shadow-5: rgba(200, 200, 255, 5%);
+  --color-light-shadow-10: rgba(200, 200, 255, 10%);
+  --color-light-shadow-20: rgba(200, 200, 255, 20%);
+  --table-min-width: 60rem;
+  --default-border-radius: 0.5rem;
+}
+
 *,
 *::after,
 *::before {
@@ -265,4 +281,14 @@ h5 {
 h6 {
   font-size: 0.875rem; /* 14px */
   line-height: 1.25rem; /* 20px */
+}
+
+/* css contact */
+.content {
+  max-width: var(--width-content);
+  margin: calc(var(--spacing) * 2) auto;
+  padding: var(--spacing);
+  background: var(--color-white);
+  box-shadow: 0.2rem 0.2rem 0.5rem rgba(var(--color-dark-shadow-20));
+  border-radius: var(--default-border-radius);
 }
