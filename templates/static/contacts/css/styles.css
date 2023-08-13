@@ -1,0 +1,57 @@
+/* css contact */
+.content {
+  max-width: var(--width-content);
+  margin: calc(var(--spacing) * 2) auto;
+  padding: var(--spacing);
+  background: var(--color-white);
+  box-shadow: 0.2rem 0.2rem 0.5rem var(--color-dark-shadow-20);
+  border-radius: var(--default-border-radius);
+}
+
+.responsive-table {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+.contacts-table {
+  width: 100%;
+  min-width: var(--table-min-width);
+}
+
+.table-caption {
+  font-size: var(--font-size-mediun);
+}
+
+.table-row {
+  text-align: left;
+  text-overflow: ellipsis;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.table-row:nth-of-type(2n) {
+  background-color: var(--color-dark-shadow-5);
+}
+
+.table-row:not(.table-row-header):hover {
+  background-color: var(--color-dark-shadow-10);
+}
+
+.table-row-header {
+  color: var(--color-black);
+  background-color: var(--color-light-gray);
+}
+
+.table-header,
+.table-cel {
+  padding: var(--spacing);
+}
+
+.table-link {
+  color: var(--link-dark-color);
+  transition: color 0.2s ease-in-out;
+  text-decoration: none;
+}
+
+.table-link:hover {
+  color: var(--color-black);
+}

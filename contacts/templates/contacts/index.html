@@ -1,4 +1,9 @@
 {% extends 'global/base.html' %}
+{% load static %}
+
+{% block 'head' %}
+  <link rel="stylesheet" href="{% static 'contacts/css/styles.css' %}">
+{% endblock %}
 
 {% block 'title' %} Agenda {% endblock %}
 
@@ -8,7 +13,6 @@
       <caption class="table-caption">
         Contacts
       </caption>
-
       <thead>
         <tr class="table-row table-row-header">
           <th class="table-header">Id</th>
