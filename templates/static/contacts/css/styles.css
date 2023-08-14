@@ -55,3 +55,18 @@
 .table-link:hover {
   color: var(--color-black);
 }
+
+@media (min-width: 600px) {
+  .single-contact {
+    max-width: 80%;
+    margin: calc(var(--spacing) * 2) auto;
+  }
+}
+
+.single-contact h1 {
+  margin: 1rem 0;
+}
+
+.single-contact p {
+  margin: 1rem 0;
+}
