@@ -2,7 +2,7 @@
   --width-content: 98rem;
   --link-dark-color: rgb(0, 83, 134);
   --link-light-color: rgb(156, 217, 255);
-  --spacing: 1.2rem;
+  --spacing: 1.5rem;
   --color-white: rgb(245, 245, 255);
   --color-black: rgb(0, 0, 30);
   --color-light-gray: rgb(230, 230, 245);
@@ -282,4 +282,70 @@ h5 {
 h6 {
   font-size: 0.875rem; /* 14px */
   line-height: 1.25rem; /* 20px */
+}
+
+.header {
+  background: var(--color-black);
+  padding: var(--spacing);
+  box-shadow: 0 5px 10px 2px var(--color-dark-shadow-20);
+  z-index: 1;
+  position: relative;
+}
+
+.header-heading {
+  font-size: 4rem;
+  text-align: center;
+}
+
+.header-link {
+  color: var(--link-light-color);
+  text-decoration: none;
+  transition: filter 0.2s ease-in-out;
+}
+
+.header-link:hover {
+  filter: brightness(70%);
+}
+
+.menu {
+  margin: var(--spacing);
+}
+
+.menu-list {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  flex-flow: row wrap;
+}
+
+.menu-link {
+  display: block;
+  padding: var(--spacing);
+  color: var(--link-light-color);
+  text-decoration: none;
+  transition: background-color 0.2s ease-in-out;
+  border-radius: 0.4rem;
+}
+
+.menu-link:hover {
+  background: var(--color-light-shadow-10);
+}
+
+.search {
+  display: flex;
+  justify-content: center;
+}
+
+.search-input {
+  font-size: 1.5rem;
+  padding: 0.5rem 2rem;
+  width: 100%;
+  max-width: 32rem;
+  border-radius: 0.4rem;
+  border: 0.1rem solid var(--link-light-color);
+  outline: none;
+}
+
+.search-input:focus {
+  box-shadow: 0 0 1.5rem var(--link-light-color);
 }
