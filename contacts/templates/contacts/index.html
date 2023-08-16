@@ -8,6 +8,7 @@
 {% block 'title' %} Agenda {% endblock %}
 
 {% block 'content' %}
+{% if contacts %}
   <div class="responsive-table">
     <table class="contacts-table">
       <caption class="table-caption">
@@ -42,4 +43,11 @@
       </tbody>
     </table>
   </div>
+{% else %}
+  <section class="single-contact">
+    <h1>
+      Nenhum contato encontrado
+    </h1>
+  </section>
+{% endif %}
 {% endblock  %}
