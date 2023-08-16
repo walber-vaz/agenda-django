@@ -349,3 +349,23 @@ h6 {
 .search-input:focus {
   box-shadow: 0 0 1.5rem var(--link-light-color);
 }
+
+.pagination {
+  margin-top: var(--spacing);
+  display: flex;
+  justify-content: center;
+  padding: calc(var(--spacing) * 0.8);
+  font-size: 1.2rem;
+}
+
+.pagination .step-links {
+  display: flex;
+  gap: calc(var(--spacing) * 0.8);
+}
+
+.pagination .step-links a {
+  color: var(--link-dark-color);
+  transition: color 0.2s ease-in-out;
+  text-decoration: none;
+  display: block;
+}
