@@ -1,19 +1,40 @@
-# from django.core.paginator import Paginator
-
-# from contacts.models import Contact
-
-# from django.db.models import Q
-# from django.shortcuts import get_object_or_404, redirect, render
-
-
+from django.core.exceptions import ValidationError
+from django.forms import ModelForm
 from django.shortcuts import render
+
+from contacts.models import Contact
+
+
+class ContactForm(ModelForm):
+    class Meta:
+        model = Contact
+        fields = (
+            "first_name",
+            "last_name",
+            "email",
+            "phone",
+            "description",
+        )
+
+    def clean(self):
+        self.add_error(
+            "first_name",
+            ValidationError("First name is required", code="required"),
+        )
+
+        return super().clean()
 
 
 def create(request):
-    # contacts = Contact.objects.filter(show=True).order_by("-id")
-    # paginator = Paginator(contacts, 10)
-    # page_number = request.GET.get("page")
-    # page_obj = paginator.get_page(page_number)
-    context = {}
+    if request.method == "POST":
+        context = {
+            "form": ContactForm(data=request.POST or None),
+        }
+
+        return render(request, "contacts/create.html", context)
+
+    context = {
+        "form": ContactForm(),
+    }
 
     return render(request, "contacts/create.html", context)
