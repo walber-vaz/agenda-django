@@ -4,7 +4,7 @@ version = "0.1.0"
 description = ""
 authors = ["Walber Vaz da Silva <wvs.walber@gmail.com>"]
 readme = "README.md"
-packages = [{include = "agenda_django"}]
+packages = [{include = "agenda-django", from = "."}]
 
 [tool.poetry.dependencies]
 python = "^3.11"
